@@ -300,19 +300,19 @@ Section.reviews {
 } 
 .review-item.previous,
 .review-item.next {
-  opacity: 0.5;
+  opacity: 0.65;
   transition: all 0.3s ease-in-out;
   z-index: 101;
 }
 .review-item.previous {
   transform: translateX(-80%);
   border-left: 1px solid rgb(147, 147, 147);
-  background: var(--review-item-background-leftSide-gradient);
+  background: var(--bg-panel);
 } 
 .review-item.next {
   transform: translateX(80%);
   border-right: 1px solid rgb(147, 147, 147);
-  background: var(--review-item-background-rightSide-gradient);
+  background: var(--bg-panel);
 }
 
 .review-item .review-text {

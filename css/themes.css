@@ -1,6 +1,6 @@
 :root {
   --bg: #fff;
-  --bg-panel: #a8a6a6;
+  --bg-panel: #cbcbcb;
   --color-headings: #161c2d;
   --color-text-opacity: rgba(22, 28, 45, 0.7);
   --color-text: #161c2d;
@@ -41,7 +41,7 @@
 
 [data-theme="dark"] {
   --bg: #171a23;
-  --bg-panel: #a8a6a6;
+  --bg-panel: #cbcbcb;
   --color-headings: #fff;
   --color-text-opacity: rgba(255, 255, 255, 0.7);
   --color-text: #fff;
