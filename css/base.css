@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+}
+
+section,
+footer,
+header,
+main,
+nav {
+  display: block;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.content {
+  background: var(--content-background-gradient);
+  width: calc(100% - 6rem);
+  /* position: relative; */
+}
+
+.sidebar.open .content {
+  width: calc(100% - 14rem);
+}
+
+.right-gradient,
+.left-gradient {  
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  width: 15%;
+  z-index: 102;
+}
+.right-gradient {  
+  right: 0;
+  width: 15%;
+  background: var(--content-gradient-right);  
+}
+.left-gradient {  
+  left: 0;
+  width: 25%;
+  background: var(--content-gradient-left);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+a:hover {
+  color: var(--logo-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-headings);
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+button {
+  outline: none;
+}
+
+.container,
+.container-fluid {
+  width: 100%;
+  /* padding-left: 15px;
+  padding-right: 15px; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* .container {
+  max-width: 1140px;
+} */
+
+.ul-defaults-none {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  font-weight: 700;
+  min-width: 175px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 1.63px;
+  transition: 0.4s;
+  height: 65px;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-shadow: 0 32px 54px rgba(3, 3, 3, 0.12);
+}
+
+.btn:not(:disabled):not(.disabled),
+button:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.btn-primary,
+.btn-primary a {
+  color: var(--bg);
+  background-color: var(--color-anchor);
+  border-color: var(--color-anchor);
+}
+
+.round-pill {
+  border-radius: 50rem;
+}
+
+.header-large {
+  font-size: 5rem;
+  letter-spacing: -2.5px;
+  line-height: 1.05;
+}
+.header-medium {
+  font-size: 3rem;
+  letter-spacing: -2px;
+}
+.sub-header {
+  font-size: 1.3125rem;
+  line-height: 1.5;
+  padding-top: 1.25rem;
+  padding-bottom: 1.875rem;
+}
