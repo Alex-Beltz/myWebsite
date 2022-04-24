@@ -18,12 +18,12 @@ nav {
 
 .content {
   background: var(--content-background-gradient);
-  width: calc(100% - 6rem);
-  /* position: relative; */
+  width: calc(100% - var(--sidebar-closed-width));
+  position: relative;
 }
 
 .sidebar.open .content {
-  width: calc(100% - 14rem);
+  width: calc(100% - var(--sidebar-open-width));
 }
 
 .right-gradient,
@@ -37,13 +37,14 @@ nav {
 }
 .right-gradient {  
   right: 0;
-  width: 15%;
   background: var(--content-gradient-right);  
 }
 .left-gradient {  
-  left: 0;
-  width: 25%;
+  left: 0; 
   background: var(--content-gradient-left);
+}
+.sidebar.open .left-gradient {
+  left: var(--sidebar-open-width);
 }
 
 a {
