@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
 }
@@ -8,12 +14,6 @@ header,
 main,
 nav {
   display: block;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
 }
 
 .content {
@@ -27,7 +27,7 @@ nav {
 }
 
 .right-gradient,
-.left-gradient {  
+.left-gradient {
   position: absolute;
   height: 100%;
   top: 0;
@@ -35,12 +35,12 @@ nav {
   width: 15%;
   z-index: 102;
 }
-.right-gradient {  
+.right-gradient {
   right: 0;
-  background: var(--content-gradient-right);  
+  background: var(--content-gradient-right);
 }
-.left-gradient {  
-  left: 0; 
+.left-gradient {
+  left: 0;
   background: var(--content-gradient-left);
 }
 .sidebar.open .left-gradient {
@@ -137,3 +137,13 @@ button:not(:disabled):not(.disabled) {
   padding-top: 1.25rem;
   padding-bottom: 1.875rem;
 }
+
+/*************************
+******* Main Content *****
+*************************/
+
+/* section.isInvisible {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+} */

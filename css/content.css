@@ -1,0 +1,32 @@
+section.portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 5rem;
+}
+.portfolio div.portfolio-header {
+  display: flex;
+  justify-content: center;
+}
+.portfolio div.portfolio-header h1 {
+  font-weight: bold;
+  line-height: 3;
+  font-size: 45px;
+}
+.portfolio div.portfolio-body {
+  display: flex;
+  justify-content: center;
+}
+.portfolio div.portfolio-body h2 {
+}
+
+/*/////////////////////////
+////content isVisible///
+/////////////////////////*/
+
+Section.reviews.isVisible {
+  opacity: 1;
+  visibility: visible;
+  z-index: 100;
+}

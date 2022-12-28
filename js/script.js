@@ -1,34 +1,25 @@
-
 // sidebar
-const menuIconBtn = document.querySelector('[data-menu-icon-btn]')
+const menuIconBtn = document.querySelector("[data-menu-icon-btn]");
 
-const sidebar = document.querySelector('[data-sidebar]')
-const sidebarText = document.querySelectorAll('.sidebar-link .hidden-sidebar')
+const sidebar = document.querySelector("[data-sidebar]");
+const sidebarText = document.querySelectorAll(".sidebar-link .hidden-sidebar");
 
 //  open/close sidebar
-menuIconBtn.addEventListener('click', () => {
-    sidebar.classList.toggle("open")
-
-    // ** clean up menu item tex shift on close **
-
-    // if (sidebar.classList.contains('open')) {
-    //   sidebarText.style.color = 'transparent';
-    // }
+menuIconBtn.addEventListener("click", () => {
+  sidebar.classList.toggle("open");
 });
-
-
 
 //****************************************** */
 // changing theme
 //****************************************** */
-const theme = 'theme';
-const dataTheme = 'data-theme';
-const themeTab = '.theme-tab';
-const switcherBtn = '.switcher-btn';
-const dark = 'dark';
-const light = 'light';
-const open = 'open';
-const active = 'active';
+const theme = "theme";
+const dataTheme = "data-theme";
+const themeTab = ".theme-tab";
+const switcherBtn = ".switcher-btn";
+const dark = "dark";
+const light = "light";
+const open = "open";
+const active = "active";
 
 const root = document.documentElement;
 const toggleTheme = document.querySelector(themeTab);
@@ -47,7 +38,7 @@ const setActive = (elem, selector) => {
 const setTheme = (val) => {
   if (val === dark) {
     root.setAttribute(dataTheme, dark);
-    localStorage.setItem(theme, dark)
+    localStorage.setItem(theme, dark);
   } else if (val === light) {
     root.setAttribute(dataTheme, light);
     localStorage.setItem(theme, light);
@@ -60,16 +51,16 @@ if (currentTheme) {
   switcher.forEach((btn) => {
     btn.classList.remove(active);
   });
-  
+
   if (currentTheme === dark) {
     switcher[1].classList.add(active);
   } else if (currentTheme === light) {
     switcher[0].classList.add(active);
   }
-};
+}
 
 //toggle theme tab
-toggleTheme.addEventListener('click', function() {
+toggleTheme.addEventListener("click", function () {
   const tab = this.parentElement.parentElement;
   if (!tab.className.includes(open)) {
     tab.classList.add(open);
@@ -79,13 +70,11 @@ toggleTheme.addEventListener('click', function() {
 });
 
 //set active state (light / dark)
-for (elem of switcher) {
+for (let elem of switcher) {
   // console.log(elem);
-  elem.addEventListener('click', function() {
+  elem.addEventListener("click", function () {
     const toggle = this.dataset.toggle;
     setActive(elem, switcherBtn);
     setTheme(toggle);
   });
-};
-//****************************************** */
-//****************************************** */
+}
